@@ -6,5 +6,5 @@ export interface Song {
     album: string;
     style: string;    
     url: string;
-    duration: number;
+    duration: string;
   }
