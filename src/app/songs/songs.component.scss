@@ -1,0 +1,40 @@
+.list_wrapp {
+
+    .artist_wrapp {
+        background-position: top;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        h2 {
+            bottom: 0;
+            position: absolute;
+            font-size: 50px;
+            left: 30px;
+        }
+    }
+
+    .songs_wrapp {
+        width: 34%;
+        padding: 25px 35px;
+        float: left;
+        table {
+            border-collapse: collapse;
+            tr {
+                cursor: pointer;
+                &.selected {
+                    background: #787575;
+                }
+                td {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .songs_detail {
+        width: 55%;
+        padding: 25px 35px;
+        float: left;
+    }
+}

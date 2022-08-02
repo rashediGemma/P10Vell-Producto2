@@ -3,7 +3,7 @@ export interface Song {
     title: string;
     group: string;
     year: number;    
-    disk: string;
+    album: string;
     style: string;    
     url: string;
     duration: number;

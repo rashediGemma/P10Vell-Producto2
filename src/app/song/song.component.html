@@ -1,6 +1,15 @@
 <div *ngIf="song">
 
-    <h2>{{song.title | uppercase}} Details</h2>
-    <div><span>id: </span>{{song.id}}</div>
+    <h2>{{song.title | uppercase}}</h2>
+    <ul>
+      <li>Title: {{song.title}}</li>
+      <li>Artists: {{song.group}}</li>
+      <li>Year: {{song.year}}</li>
+      <li>Album: {{song.album}}</li>
+      <li>Style: {{song.style}}</li>
+      <li>Title: {{song.title}}</li>
+      <li>Url: {{song.url}}</li>
+      <li>Duration: {{song.duration}} min</li>
+    </ul>
   
   </div>
