@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SONGS } from '../mock-songs';
 import { Song } from '../song';
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-songs',
@@ -9,13 +9,19 @@ import { Song } from '../song';
 })
 export class SongsComponent implements OnInit {
 
-  songs = SONGS;
+  //songs = SONGS;
+
+  songs: any = [];
 
   selectedSong!: Song;
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
+    this.httpClient.get("assets/mock-songs.json").subscribe(data =>{
+      console.log(data);
+      this.songs = data;
+    })
   }
 
   onSelect(song: Song): void {
