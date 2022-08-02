@@ -4,6 +4,7 @@
     </div>
 
     <div class="songs_wrapp">
+        <input type="text" [(ngModel)]="searchSong" placeholder="Search" /><br/><br/><br/>
         <table>
             <thead>
                 <tr>
@@ -13,7 +14,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let song of songs" (click)="onSelect(song)" [class.selected]="song === selectedSong">
+                <tr *ngFor="let song of songs | filter: searchSong" (click)="onSelect(song)" [class.selected]="song === selectedSong">
                     <td>{{song.title}}</td>
                     <td>{{song.album}}</td>
                     <td>{{song.duration}} min</td>

@@ -12,6 +12,7 @@ export class SongsComponent implements OnInit {
   //songs = SONGS;
 
   songs: any = [];
+  searchSong?: string;
 
   selectedSong!: Song;
 
@@ -19,7 +20,6 @@ export class SongsComponent implements OnInit {
 
   ngOnInit(): void {
     this.httpClient.get("assets/mock-songs.json").subscribe(data =>{
-      console.log(data);
       this.songs = data;
     })
   }

@@ -7,18 +7,22 @@ import { AppComponent } from './app.component';
 import { SongComponent } from './song/song.component';
 import { SongsComponent } from './songs/songs.component';
 import { PlayerComponent } from './player/player.component';
+import { FilterPipe } from './filterPipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     SongComponent,
     SongsComponent,
-    PlayerComponent
+    PlayerComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
