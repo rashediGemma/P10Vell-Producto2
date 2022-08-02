@@ -1,1 +1,6 @@
-<p>song works!</p>
+<div *ngIf="song">
+
+    <h2>{{song.title | uppercase}} Details</h2>
+    <div><span>id: </span>{{song.id}}</div>
+  
+  </div>

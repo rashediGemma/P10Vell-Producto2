@@ -1,1 +1,12 @@
-<p>songs works!</p>
+<h2>My Songs</h2>
+
+<ul class="songs">
+  <li *ngFor="let song of songs">
+    <button [class.selected]="song === selectedSong" type="button" (click)="onSelect(song)">
+      <span class="badge">{{song.id}}</span>
+      <span class="title">{{song.title}}</span>
+    </button>
+  </li>
+</ul>
+
+<app-song [song]="selectedSong"></app-song>
